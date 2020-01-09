@@ -2,7 +2,7 @@ class PigLatinizer
 
     def piglatinize(string)
         split = string.split(" ")
-        split_word = split.map do |word|
+    split_word = split.map do |word|
           piglatinize_word(word)
         end
         split_word.join(" ")
@@ -23,7 +23,9 @@ class PigLatinizer
                 consonants << word[2]
               end
             end
+            # binding.pry
           "#{word[consonants.length..-1] + consonants.join + "ay"}"
+
         end
     end
     
